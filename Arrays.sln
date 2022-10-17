@@ -1,25 +1,75 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32929.385
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{BB6E3623-FF70-4010-BAD8-6A1B530FC220}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BB6E3623-FF70-4010-BAD8-6A1B530FC220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB6E3623-FF70-4010-BAD8-6A1B530FC220}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB6E3623-FF70-4010-BAD8-6A1B530FC220}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB6E3623-FF70-4010-BAD8-6A1B530FC220}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E5D659E6-D29F-4523-B60F-9973FA674173}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.AccessControl;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Arrays
+{
+    internal class Program
+    {
+      public static void Main(string[] args)
+        {
+           
+           
+            Random rnd = new Random();
+            int[,] a = new int[20, 50];
+
+            for (int y = 0; y < 20; y ++)
+            {
+             
+
+
+                for (int x = 0; x < 50; x++)
+                {
+
+                   if (1+x%2 != 0)
+                    {
+                        if (1+y%2 == 1) { 
+                        
+
+                            a[y, x] = 1;
+
+                             }
+                        
+                    }
+
+                  
+                }
+
+
+
+            }
+
+            
+            for (int x = 0; x < 50; x++)
+                {
+                    for (int y =0; y < 20; y++) 
+                     {
+                   
+
+                        Console.Write(a[y,x]+" ");
+
+
+
+
+                               }
+
+
+
+
+
+
+                            }
+
+
+            Console.ReadKey();
+            
+            
+        }
+    
+    }
+
+}
